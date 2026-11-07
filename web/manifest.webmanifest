@@ -1,0 +1,13 @@
+{
+  "name": "Gelisio",
+  "short_name": "Gelisio",
+  "description": "Alışkanlık, proje ve derin çalışma takibi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07090F",
+  "theme_color": "#07090F",
+  "icons": [
+    { "src": "icon.png", "sizes": "any", "type": "image/png", "purpose": "any" }
+  ]
+}
