@@ -1,0 +1,18 @@
+{
+    "name": "Gelisio",
+    "short_name": "Gelisio",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#07090F",
+    "theme_color": "#07090F",
+    "description": "Girişimci için alışkanlık, proje ve hobi gelişim takibi.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "lang": "tr",
+    "icons": [
+        { "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "icons/Icon-512.png", "sizes": "512x512", "type": "image/png" },
+        { "src": "icons/Icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+        { "src": "icons/Icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    ]
+}
