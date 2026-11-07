@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("app.cash.paparazzi")
 }
 
 // google-services.json varsa Firebase etkinleşir; yoksa uygulama kurulum ekranı gösterir.
@@ -19,8 +20,8 @@ android {
         applicationId = "com.plan.gelisio"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "1.0.0"
     }
 
     buildTypes {
@@ -54,6 +55,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.3")
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+    implementation("dev.chrisbanes.haze:haze:1.1.1")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
