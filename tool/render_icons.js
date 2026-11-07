@@ -19,21 +19,14 @@ const jobs = [];
 const add = (file, size, opt) => jobs.push({ file: path.join(R, file), size, opt });
 // Android klasik (API < 26)
 for (const [d, s] of [['mdpi', 48], ['hdpi', 72], ['xhdpi', 96], ['xxhdpi', 144], ['xxxhdpi', 192]]) {
-  add(`android_res/mipmap-${d}/ic_launcher.png`, s, { bg: true, rounded: true, scale: 1 });
+  add(`app/src/main/res/mipmap-${d}/ic_launcher.png`, s, { bg: true, rounded: true, scale: 1 });
 }
 // Android adaptif ön plan (108dp tuval, güvenli alan 66dp → işaret ~%58)
 for (const [d, s] of [['mdpi', 108], ['hdpi', 162], ['xhdpi', 216], ['xxhdpi', 324], ['xxxhdpi', 432]]) {
-  add(`android_res/mipmap-${d}/ic_launcher_foreground.png`, s, { bg: false, scale: 0.58 });
+  add(`app/src/main/res/mipmap-${d}/ic_launcher_foreground.png`, s, { bg: false, scale: 0.58 });
 }
 // Web
-add('web/icons/Icon-192.png', 192, { bg: true, rounded: true, scale: 1 });
-add('web/icons/Icon-512.png', 512, { bg: true, rounded: true, scale: 1 });
-add('web/icons/Icon-maskable-192.png', 192, { bg: true, rounded: false, scale: 0.72 });
-add('web/icons/Icon-maskable-512.png', 512, { bg: true, rounded: false, scale: 0.72 });
-add('web/favicon.png', 64, { bg: true, rounded: true, scale: 1 });
 // Uygulama içi
-add('assets/logo/gelisio_mark.png', 512, { bg: false, scale: 1 });
-add('assets/logo/gelisio_icon.png', 1024, { bg: true, rounded: true, scale: 1 });
 (async () => {
   const b = await chromium.launch();
   for (const j of jobs) {
@@ -43,7 +36,6 @@ add('assets/logo/gelisio_icon.png', 1024, { bg: true, rounded: true, scale: 1 })
     await p.screenshot({ path: j.file, omitBackground: true, clip: { x: 0, y: 0, width: j.size, height: j.size } });
     await p.close();
   }
-  fs.writeFileSync(path.join(R, 'assets/logo/gelisio.svg'), svg({ bg: true, rounded: true, scale: 1 }));
   await b.close();
   console.log(jobs.length + ' ikon üretildi');
 })();

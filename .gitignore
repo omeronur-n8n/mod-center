@@ -1,22 +1,18 @@
-# Flutter / Dart
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
+# Gradle / Android
+.gradle/
 build/
+app/build/
+local.properties
 *.iml
 .idea/
 .vscode/
 .DS_Store
-# Android
-android/.gradle/
-android/local.properties
-android/captures/
-android/key.properties
+captures/
+.externalNativeBuild/
+.cxx/
+# Imzalama anahtarları asla commit edilmez
 *.jks
 *.keystore
-# Firebase
-.firebase/
-firebase-debug.log
+key.properties
+# Firebase: google-services.json kişisel proje bilgisidir; kendi makinende tut
+.kotlin/
