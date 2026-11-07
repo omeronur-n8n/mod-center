@@ -133,7 +133,7 @@ private fun SetupScreen() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text("Firebase henüz bağlı değil", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+        Text("Firebase henüz bağlı değil", fontSize = 22.sp, fontWeight = FontWeight.SemiBold, color = G.text)
         Spacer(Modifier.height(12.dp))
         Text(
             "app/google-services.json dosyasını Firebase konsolundan indirip koy, sonra uygulamayı yeniden derle. " +
