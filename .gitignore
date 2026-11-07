@@ -16,3 +16,5 @@ captures/
 key.properties
 # Firebase: google-services.json kişisel proje bilgisidir; kendi makinende tut
 .kotlin/
+
+app/google-services.json
